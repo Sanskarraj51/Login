@@ -11,7 +11,7 @@ function Registration() {
 
   const [flag, setFlag] = useState(false);
   const [login, setLogin] = useState(true);
-  const [info, setInfo] = useState(true);
+  
 
 
   function handleFormSubmit(e) {
@@ -37,18 +37,11 @@ function Registration() {
   }
 
  
-  function infoClick() {
-    setInfo(!info);
-  }
+  
 
   return (
     <>
-      <nav className="navbar navbar-light">
-        <div className="container mb-4" onClick={infoClick}>
-          <h4 className="btn btn-dark btn-lg btn-block">Personel Info</h4>
-        </div>
-      </nav>
-      {info ? (
+ 
         <div>
           {" "}
           {login ? (
@@ -129,22 +122,7 @@ function Registration() {
             <Login />
           )}
         </div>
-      ) : (
-        <div>
-          <p>
-            <strong>Company:</strong> Expert Technologies PVT Ltd
-          </p>
-          <p>
-            <strong>Address:</strong> Jaipur,Rajasthan
-          </p>
-          <p>
-            <strong>Phone:</strong> XXXXXXXXXX09
-          </p>
-          <p>
-            <strong>Email:</strong> XXXXXXXX@gmail.com
-          </p>
-        </div>
-      )}
+    
     </>
   );
 }

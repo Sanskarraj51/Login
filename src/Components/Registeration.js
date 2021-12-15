@@ -95,7 +95,7 @@ function Registration() {
                   as="select"
                   onChange={(event) => setProfession(event.target.value)}
                 >
-                  <option>Developer</option>
+                  <option>Select</option>
                   <option>Artist</option>
                   <option>Photographer</option>
                   <option>Team Player</option>
@@ -106,11 +106,9 @@ function Registration() {
               <button type="submit" className="btn btn-dark btn-lg btn-block">
                 Register
               </button>
-              <p className="forgot-password text-right">
-                Already registered{" "}
-                <a href="#" onClick={handleClick}>
-                  log in?
-                </a>
+              <p onClick={handleClick} className="forgot-password text-right">
+                Already registered{" "}log in?
+                
               </p>
               {flag && (
                 <Alert color="primary" variant="danger">
